@@ -28,7 +28,7 @@ export default function SandBackground() {
     let lastSY = -99;
 
     function toSim(clientX: number, clientY: number) {
-      const r = canvas.getBoundingClientRect();
+      const r = canvas!.getBoundingClientRect();
       return {
         sx: Math.round((clientX - r.left)  / r.width  * (SIM_W - 1)),
         sy: Math.round((clientY - r.top)   / r.height * (SIM_H - 1)),
